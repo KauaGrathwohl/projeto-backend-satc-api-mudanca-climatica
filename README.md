@@ -1,5 +1,11 @@
-# projeto_final_backend_satc
+# Projeto final disciplina de Backend - SATC 2024
 
-Projeto final com o intuito de Desenvolver uma API REST para processamento de requisições de um cliente HTTP. 
+API REST para Processamento de Requisições HTTP
+
+### Descrição
+
+Esta API REST tem como objetivo processar requisições HTTP de um cliente e fornecer respostas adequadas. 
+
+A API deve oferecer funcionalidades básicas para gerenciar dados e realizar operações em um sistema, expondo endpoints para diferentes tipos de requisições (GET, POST, PUT, DELETE).
 
 
