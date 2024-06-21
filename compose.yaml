@@ -1,0 +1,12 @@
+services:
+  mudancaclimatica:
+    build: ./mudancaclimatica
+    ports:
+      - "8080:8080"
+
+  mongodb:
+    image: "mongo"
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
