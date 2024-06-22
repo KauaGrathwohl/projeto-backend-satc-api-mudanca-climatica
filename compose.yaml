@@ -3,10 +3,17 @@ services:
     build: ./mudancaclimatica
     ports:
       - "8080:8080"
+    links:
+      - mongodb
 
   mongodb:
     image: "mongo"
     restart: always
+    ports:
+      - "27017:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: mudancaclimaticadb
+    volumes:
+      - ~/docker/volumes/mongodb:/data/db
