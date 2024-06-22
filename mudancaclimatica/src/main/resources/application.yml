@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: mudancaclimatica
+
+  data:
+    mongodb:
+      host: mongodb
+      port: 27017
+      username: root
+      password: example
+      database: mudancaclimaticadb
+      authentication-database: admin
+
+api:
+  security:
+    token:
+      secret: asdasdasd
+      issuer: teste
+      expiration-minutes: 1000000
