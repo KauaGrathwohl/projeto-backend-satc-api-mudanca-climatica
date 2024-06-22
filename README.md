@@ -14,4 +14,4 @@ Para execução do compose.yaml o usuário deve possuir o docker compose instala
 https://docs.docker.com/compose/install/
 
 Após instalação do docker compose, basta executar o comando abaixo para rodar os containers da aplicação:
-docker compose up
+```docker compose up```
