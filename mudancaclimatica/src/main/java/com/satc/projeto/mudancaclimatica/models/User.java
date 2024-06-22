@@ -1,6 +1,7 @@
 package com.satc.projeto.mudancaclimatica.models;
 
-import com.satc.projeto.mudancaclimatica.Role;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
@@ -20,9 +21,12 @@ public class User implements UserDetails {
     @Id
     private String id;
 
+    @Email(message = "Username is not valid", regexp = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
+    @NotEmpty(message = "Username cannot be empty")
     @Field("username")
     private String username;
 
+    @NotEmpty(message = "Password cannot be empty")
     @Field("password")
     private String password;
 

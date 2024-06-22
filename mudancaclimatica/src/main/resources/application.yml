@@ -11,6 +11,10 @@ spring:
       database: mudancaclimaticadb
       authentication-database: admin
 
+server:
+  error:
+    include-message: always
+
 api:
   security:
     token:

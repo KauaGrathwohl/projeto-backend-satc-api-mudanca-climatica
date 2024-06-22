@@ -1,11 +1,11 @@
 package com.satc.projeto.mudancaclimatica.controllers;
 
-import com.satc.projeto.mudancaclimatica.Role;
+import com.satc.projeto.mudancaclimatica.dto.UserDto;
 import com.satc.projeto.mudancaclimatica.models.User;
-import com.satc.projeto.mudancaclimatica.repository.UserRepository;
+import com.satc.projeto.mudancaclimatica.services.AuthenticationService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,22 +16,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Autowired
-    private UserRepository userRepository;
+    private AuthenticationService authenticationService;
 
     @PostMapping("signup")
-    public ResponseEntity<User> signup(@RequestBody User user) {
-        user.setRole(Role.ADMIN);
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        User userSaved = userRepository.save(user);
-        return ResponseEntity.ok(userSaved);
+    public ResponseEntity<UserDto> signup(@Valid @RequestBody User user) {
+        UserDto userDto = authenticationService.signup(user);
+        return ResponseEntity.ok(userDto);
     }
 
-//    @PostMapping("signup")
-//    public ResponseEntity signup(@RequestBody User user) {
-//        userRepository.save(user);
-//        return ResponseEntity.ok().build();
-//    }
+    @PostMapping("signin")
+    public ResponseEntity<String> signin(@RequestBody User user) {
+        String token = authenticationService.signin(user);
+        return ResponseEntity.ok(token);
+    }
 }

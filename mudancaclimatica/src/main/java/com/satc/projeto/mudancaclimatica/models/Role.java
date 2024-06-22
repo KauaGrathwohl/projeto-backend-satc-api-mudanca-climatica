@@ -1,4 +1,4 @@
-package com.satc.projeto.mudancaclimatica;
+package com.satc.projeto.mudancaclimatica.models;
 
 import org.springframework.security.core.GrantedAuthority;
 
