@@ -33,6 +33,7 @@ public class SpringSecurityConfig {
                 .cors(AbstractHttpConfigurer::disable)
                 .csrf(csrf -> csrf.ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/user/signup"))
                         .ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/user/signin"))
+                        .ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/weather/**"))
                         .ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/info")))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)

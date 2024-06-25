@@ -47,7 +47,7 @@ public class TokenService {
 
     public String validateToken(String token) {
         try {
-            Algorithm algorithm = Algorithm.HMAC512(token);
+            Algorithm algorithm = Algorithm.HMAC512(this.secret);
             String username = JWT
                     .require(algorithm)
                     .withIssuer(this.issuer)
