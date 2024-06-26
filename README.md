@@ -132,8 +132,6 @@ Após instalação do docker compose, basta executar o comando abaixo para rodar
 - Spring Boot
 - Spring Security
 - Spring Data MongoDB
-- Lombok
-- Jakarta Validation
 
 ### Conclusão
 
