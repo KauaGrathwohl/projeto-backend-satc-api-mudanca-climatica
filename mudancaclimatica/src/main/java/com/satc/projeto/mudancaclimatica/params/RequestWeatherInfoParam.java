@@ -1,5 +1,6 @@
-package com.satc.projeto.mudancaclimatica.dto;
+package com.satc.projeto.mudancaclimatica.params;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,7 +9,8 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-public class RequestWeatherInfoDto implements Serializable {
+@AllArgsConstructor
+public class RequestWeatherInfoParam implements Serializable {
 
     private String latitude;
     private String longitude;

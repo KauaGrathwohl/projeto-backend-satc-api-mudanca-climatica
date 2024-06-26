@@ -16,4 +16,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: mudancaclimaticadb
     volumes:
-      - ~/docker/volumes/mongodb:/data/db
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
