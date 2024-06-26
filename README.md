@@ -126,6 +126,11 @@ Após instalação do docker compose, basta executar o comando abaixo para rodar
 - A API utiliza autenticação via token JWT para proteger as rotas de usuário e dados meteorológicos.
 - A proteção CSRF está desativada para facilitar a integração com clientes externos.
 
+O token JWT deve ser passado através do header no seguinte formato:
+```
+ Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0ZXN0ZSIsInN1YiI6Iml1cmltYXJxdWVzQGhvdG1haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzE5MzYyOTAzLCJleHAiOjE3NzkzNjI5MDN9.dpKFuKAvP8G6BGyW4DgC3AjlgbpZ24aHLCKKHqmnBNXvGbcE1-5JOg_F1J7-dHTNU3pq0SuRWLvcRbxjZAGZAw
+```
+
 
 ### Tecnologias Utilizadas
 
