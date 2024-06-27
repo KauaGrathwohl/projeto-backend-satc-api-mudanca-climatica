@@ -147,9 +147,9 @@ O token JWT deve ser passado através do header no seguinte formato:
 
 ### Observações importantes
 
-- A API externa que consumimos, aceita puxar dados apenas a partir da data: 2022-02-01
+- A API externa que consumimos, aceita puxar dados apenas a partir da data: 2022-02-01.
 
-- Isso deve ser considerado ao enviar requisições nos endpoints /weather
+- Isso deve ser considerado ao enviar requisições nos endpoints /weather.
 
 
 ### Conclusão
