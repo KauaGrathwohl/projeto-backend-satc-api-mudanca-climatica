@@ -9,6 +9,11 @@ Esta API REST tem como objetivo processar requisições HTTP de um cliente e for
 A API deve oferecer funcionalidades básicas para gerenciar dados e realizar operações em um sistema, expondo endpoints para diferentes tipos de requisições (GET, POST, PUT, DELETE).
 
 
+#### Link da imagem:
+```
+https://hub.docker.com/repository/docker/iurilima/projeto_final_backend_satc-mudancaclimatica/general
+```
+
 ### Instruções para execução do docker
 Para execução do compose.yaml o usuário deve possuir o docker compose instalado na máquina. Instruções para a instalação do mesmo pode ser encontrado no link abaixo:
 
